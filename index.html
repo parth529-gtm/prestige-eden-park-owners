@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏠</text></svg>">
+<title>Prestige Eden Park — Owner Contact List</title>
+</head>
+<body>
+
+<style>
+  :root {
+    --ground: #F7F5F2;
+    --card: #FFFFFF;
+    --ink: #1C2321;
+    --muted: #6B7570;
+    --line: #E4E0D9;
+    --teal: #0F6E63;
+    --teal-dark: #0B534B;
+    --green: #1E9E6A;
+    --amber-bg: #FBF3E4;
+    --amber-line: #E8D3A8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 0 18px 64px; }
+
+  /* Header */
+  header {
+    background: var(--teal);
+    color: #fff;
+    padding: 34px 18px 30px;
+    text-align: center;
+  }
+  header .inner { max-width: 640px; margin: 0 auto; }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 12px;
+    font-weight: 700;
+    opacity: 0.85;
+    margin: 0 0 8px;
+  }
+  header h1 {
+    font-size: 27px;
+    line-height: 1.2;
+    margin: 0 0 10px;
+    text-wrap: balance;
+    font-weight: 800;
+  }
+  header p {
+    margin: 0 auto;
+    max-width: 460px;
+    font-size: 15px;
+    opacity: 0.95;
+  }
+
+  /* Section labels */
+  .section-label {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 34px 2px 14px;
+  }
+  .section-label h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    margin: 0;
+    color: var(--teal-dark);
+    font-weight: 800;
+  }
+  .section-label .count {
+    font-size: 13px;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .helper {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-line);
+    border-radius: 12px;
+    padding: 13px 15px;
+    font-size: 14px;
+    color: #7a5a1e;
+    margin: 0 2px 18px;
+  }
+
+  /* Card */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 18px;
+    margin-bottom: 14px;
+  }
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .owner-name { font-size: 18px; font-weight: 800; margin: 0; }
+  .owner-sub { font-size: 13px; color: var(--muted); margin: 2px 0 0; }
+  .rent-tag {
+    background: #EAF4F2;
+    color: var(--teal-dark);
+    font-weight: 800;
+    font-size: 15px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Facts */
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 15px;
+  }
+  .fact {
+    background: var(--ground);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 13px;
+    color: #3d4643;
+  }
+  .fact b { color: var(--ink); font-weight: 700; }
+  .no-facts { font-size: 13.5px; color: var(--muted); font-style: italic; margin-bottom: 15px; }
+
+  /* Number + buttons */
+  .num-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .phone {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    font-variant-numeric: tabular-nums;
+    flex: 1 1 auto;
+    min-width: 150px;
+  }
+  .btns { display: flex; gap: 8px; }
+  button.act, a.act {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14.5px;
+    font-weight: 700;
+    padding: 11px 16px;
+    border-radius: 11px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    transition: background .15s, transform .05s;
+    white-space: nowrap;
+  }
+  button.act:active, a.act:active { transform: scale(0.97); }
+  button.act:focus-visible, a.act:focus-visible {
+    outline: 3px solid var(--teal);
+    outline-offset: 2px;
+  }
+  .copy {
+    background: var(--ink);
+    color: #fff;
+  }
+  .copy.done { background: var(--green); }
+  .call {
+    background: var(--teal);
+    color: #fff;
+  }
+  .call:hover { background: var(--teal-dark); }
+  .open {
+    background: #fff;
+    color: var(--teal-dark);
+    border: 1.5px solid var(--teal) !important;
+  }
+  .open:hover { background: #EAF4F2; }
+
+  .note {
+    margin: 12px 0 0;
+    font-size: 13px;
+    color: var(--muted);
+    padding-top: 11px;
+    border-top: 1px solid var(--line);
+  }
+  .fresh {
+    display: inline-block;
+    background: #E7F6EE;
+    color: #147a4f;
+    font-size: 11.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 2px 8px;
+    border-radius: 6px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 40px;
+    line-height: 1.7;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+
+<header>
+  <div class="inner">
+    <p class="eyebrow">Bengaluru · Sarjapur Road</p>
+    <h1>Prestige Eden Park — Owner Contacts</h1>
+    <p>Flat owners renting out 2BHK homes directly (no brokers). Tap <b>Copy</b> to copy a number, or <b>Call</b> to phone them. The ones lower down don't share a number publicly — tap <b>Open listing</b> to reach them.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="section-label">
+    <h2>Call these owners directly</h2>
+    <span class="count">10 numbers</span>
+  </div>
+  <div class="helper">These owners posted their phone number. Tap <b>Copy</b> then paste into WhatsApp, or tap <b>Call</b>.</div>
+
+  <div id="direct"></div>
+
+  <div class="section-label">
+    <h2>Reach these through a website</h2>
+    <span class="count">7 listings</span>
+  </div>
+  <div class="helper">These owners didn't post a number publicly — the website shows it after you tap through or send a message. Tap <b>Open listing</b>.</div>
+
+  <div id="indirect"></div>
+
+  <footer>
+    All owners renting 2BHK flats at Prestige Eden Park, Sarjapur Road.<br>
+    List gathered 5 July 2026 · Always confirm the flat details and rent on the call.
+  </footer>
+</div>
+
+<script>
+  const direct = [
+    { name: "Bhanu", sub: "Owner", phone: "7259982227", rent: null, facts: [], note: "Ask for flat size, floor and rent on the call." },
+    { name: "Owner 1", sub: "Direct owner · no brokerage", phone: "+91 90319 37100", rent: "₹30,000", facts: [["Type","Premium 2BHK"],["Furnishing","Semi-furnished"]], note: "Posted March 2026 — confirm it's still available." },
+    { name: "Owner 2", sub: "Self-identified owner", phone: "9437970700", rent: null, facts: [["Size","944 sqft"],["Tower","Tower 4, 5th floor"],["Facing","West"]], note: "Says \"I am the owner, no brokerage.\" Confirm it's the 2BHK (this listing also had a 1BHK)." },
+    { name: "Niti Poddar", sub: "Owner · no brokerage", phone: "+91 63645 78638", rent: null, facts: [], note: "Only the name and number were shared — ask for flat size and floor on the call." },
+    { name: "Owner 4", sub: "Direct owner", phone: "9108542501", rent: null, facts: [], note: "Offers a site visit. No flat details posted." },
+    { name: "Owner 5", sub: "Owner", phone: "+91 98702 23391", rent: null, facts: [], note: "Wants a tenant who will maintain the flat well. No specs posted." },
+    { name: "Owner 6", sub: "Owner · Oakglen 1", phone: "9874200311", rent: null, fresh: true, facts: [["Tower","Oakglen 1, Tower 11"],["Furnishing","Semi-furnished"],["Condition","Brand new"]], note: "Posted 4–5 days ago. Listing mentioned both a 1BHK and 2BHK — confirm which." },
+    { name: "Owner 7", sub: "Owner", phone: "9686111264", rent: null, facts: [], note: "Only the number was shared — ask for details on the call." },
+    { name: "Owner 8", sub: "Owner · Zero brokerage", phone: "8918946881", rent: null, facts: [["Facing","East"],["Type","Premium 2BHK"]], note: "Says \"I am the owner, premium East-facing 2BHK.\"" },
+    { name: "Shubham Gupta", sub: "Owner", phone: "9076082605", rent: "₹50,000", facts: [["Furnishing","Fully furnished"],["Type","2BHK"]], note: "Higher rent — fully furnished flat." }
+  ];
+
+  const indirect = [
+    { name: "Sudeep Patra", sub: "Owner · SquareYards", rent: "₹38,000", fresh: true, facts: [["Size","1050 sqft"],["Parking","1 covered"],["Furnishing","Semi-furnished"]], url: "https://www.squareyards.com/rent/2-bhk-flat-in-eden-park-at-the-prestige-city-bangalore", note: "Posted 25 June. Number shown on SquareYards." },
+    { name: "Reddit owner (Tower 6)", sub: "Owner · Reddit", rent: "₹40,000", fresh: true, facts: [["Size","944–971 sqft"],["Tower","Tower 6, 25th floor"],["Facing","East"],["Deposit","₹1 lakh (low)"]], url: "https://www.reddit.com/r/bangalorerentals/comments/1u6a3wf/", note: "₹40k includes ₹7k maintenance (about ₹33k effective). Owner visiting India 17th–19th; a friend can show it earlier. Message on Reddit." },
+    { name: "Reddit owner (17th floor)", sub: "Owner · Reddit", rent: "₹42,000", facts: [["Size","~944 sqft"],["Floor","17th"],["Deposit","4 months (high)"],["Amenities","Pool, gym, spa, theatre"]], url: "https://www.reddit.com/r/BangaloreRealEstates/comments/1t0sol3/", note: "Brand new with custom interiors. Message on Reddit." },
+    { name: "saranyanairkct", sub: "Owner · Quikr", rent: "₹40,000", facts: [["Size","944 sqft"],["Furnishing","Semi-furnished"],["Condition","Brand new"]], url: "https://www.quikr.com/homes/listing/2-bhk-apartment-of-944sqft-for-rent-in-eden-park-at-the-prestige-city-bangalore-375423484", note: "Tap \"Contact Owner\" on Quikr." },
+    { name: "Keshav R & Rafeeq AL", sub: "Owners · MagicBricks", rent: "₹40,000–42,000", fresh: true, facts: [["Size","944–979 sqft"],["Deposit","₹2,52,000"],["Furnishing","Semi-furnished"]], url: "https://www.magicbricks.com/project-eden-park-at-the-prestige-city-2bhk-for-rent-in-bangalore-pppfr", note: "Two owner listings, one posted an hour ago. Tap \"Get Phone No\" (needs a quick sign-in)." },
+    { name: "Several owners", sub: "Owners · 99acres", rent: "₹35,000–45,000", fresh: true, facts: [["Size","944–979 sqft"],["Floor","14th–25th"],["Furnishing","Semi-furnished"]], url: "https://www.99acres.com/2-bhk-flats-for-rent-in-eden-park-at-the-prestige-city-sarjapur-bangalore-east-1066817-rnpffid", note: "Multiple owner listings. Tap \"View number\" — usually free, no sign-in." },
+    { name: "Owner (Tower 10)", sub: "Owner · PropHunt", rent: "₹41,000", facts: [["Tower","Tower 10"],["Deposit","₹1.5 lakh"],["Furnishing","Semi-furnished"]], url: "https://prophunt.ai/listings/rent/69a132bc1af8f1fc024d5791", note: "Number shown on the PropHunt listing." }
+  ];
+
+  function factsHTML(facts) {
+    if (!facts || !facts.length) return '<div class="no-facts">No flat details posted — ask on the call.</div>';
+    return '<div class="facts">' + facts.map(f => `<span class="fact">${f[0]}: <b>${f[1]}</b></span>`).join('') + '</div>';
+  }
+
+  function render() {
+    const d = document.getElementById('direct');
+    d.innerHTML = direct.map((o, i) => {
+      const digits = o.phone.replace(/[^\d+]/g, '');
+      const fresh = o.fresh ? '<span class="fresh">New</span>' : '';
+      const rent = o.rent ? `<span class="rent-tag">${o.rent}</span>` : '';
+      return `<div class="card">
+        <div class="card-top">
+          <div>
+            <p class="owner-name">${o.name}${fresh}</p>
+            <p class="owner-sub">${o.sub}</p>
+          </div>
+          ${rent}
+        </div>
+        ${factsHTML(o.facts)}
+        <div class="num-row">
+          <span class="phone">${o.phone}</span>
+          <div class="btns">
+            <button class="act copy" data-num="${o.phone}">Copy</button>
+            <a class="act call" href="tel:${digits}">Call</a>
+          </div>
+        </div>
+        <p class="note">${o.note}</p>
+      </div>`;
+    }).join('');
+
+    const ind = document.getElementById('indirect');
+    ind.innerHTML = indirect.map(o => {
+      const fresh = o.fresh ? '<span class="fresh">New</span>' : '';
+      const rent = o.rent ? `<span class="rent-tag">${o.rent}</span>` : '';
+      return `<div class="card">
+        <div class="card-top">
+          <div>
+            <p class="owner-name">${o.name}${fresh}</p>
+            <p class="owner-sub">${o.sub}</p>
+          </div>
+          ${rent}
+        </div>
+        ${factsHTML(o.facts)}
+        <div class="num-row">
+          <a class="act open" href="${o.url}" target="_blank" rel="noopener">Open listing ↗</a>
+        </div>
+        <p class="note">${o.note}</p>
+      </div>`;
+    }).join('');
+  }
+  render();
+
+  document.addEventListener('click', async (e) => {
+    const btn = e.target.closest('.copy');
+    if (!btn) return;
+    const num = btn.getAttribute('data-num');
+    try {
+      await navigator.clipboard.writeText(num);
+    } catch (err) {
+      const ta = document.createElement('textarea');
+      ta.value = num; document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); } catch (e2) {}
+      document.body.removeChild(ta);
+    }
+    const original = btn.textContent;
+    btn.textContent = "Copied ✓";
+    btn.classList.add('done');
+    setTimeout(() => { btn.textContent = original; btn.classList.remove('done'); }, 1600);
+  });
+</script>
+
+</body>
+</html>
