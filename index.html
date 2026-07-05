@@ -225,6 +225,69 @@
   @media (prefers-reduced-motion: reduce) {
     * { transition: none !important; }
   }
+
+  /* Shared notes */
+  .notes {
+    margin-top: 13px;
+    padding-top: 13px;
+    border-top: 1px dashed var(--line);
+  }
+  .notes-label {
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-weight: 800;
+    color: var(--muted);
+    margin: 0 0 9px;
+  }
+  .note-item {
+    background: var(--ground);
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    padding: 8px 11px;
+    margin-bottom: 7px;
+    font-size: 14px;
+  }
+  .note-item .who {
+    font-weight: 800;
+    color: var(--teal-dark);
+    font-size: 12.5px;
+  }
+  .note-item .when {
+    color: var(--muted);
+    font-size: 11.5px;
+    font-variant-numeric: tabular-nums;
+    margin-left: 6px;
+  }
+  .note-item .body { margin-top: 2px; }
+  .notes-empty { font-size: 13px; color: var(--muted); font-style: italic; margin: 0 0 9px; }
+  .note-form { display: flex; flex-direction: column; gap: 7px; }
+  .note-form .row { display: flex; gap: 7px; }
+  .note-form input, .note-form textarea {
+    font-family: inherit;
+    font-size: 14px;
+    border: 1.5px solid var(--line);
+    border-radius: 9px;
+    padding: 9px 11px;
+    width: 100%;
+    background: #fff;
+    color: var(--ink);
+  }
+  .note-form input:focus, .note-form textarea:focus {
+    outline: none;
+    border-color: var(--teal);
+  }
+  .note-form input.name { flex: 0 0 40%; }
+  .note-form textarea { resize: vertical; min-height: 40px; }
+  .note-form button {
+    -webkit-appearance: none; appearance: none; border: none; cursor: pointer;
+    font-family: inherit; font-size: 14px; font-weight: 700;
+    background: var(--teal); color: #fff;
+    padding: 10px 15px; border-radius: 10px; align-self: flex-start;
+  }
+  .note-form button:hover { background: var(--teal-dark); }
+  .note-form button:disabled { opacity: 0.5; cursor: default; }
+  .notes-status { font-size: 12.5px; color: var(--muted); margin-top: 5px; min-height: 16px; }
 </style>
 
 <header>
@@ -239,7 +302,7 @@
 
   <div class="section-label">
     <h2>Call these owners directly</h2>
-    <span class="count">10 numbers</span>
+    <span class="count">11 numbers</span>
   </div>
   <div class="helper">These owners posted their phone number. Tap <b>Copy</b> then paste into WhatsApp, or tap <b>Call</b>.</div>
 
@@ -270,7 +333,8 @@
     { name: "Owner 6", sub: "Owner · Oakglen 1", phone: "9874200311", rent: null, fresh: true, facts: [["Tower","Oakglen 1, Tower 11"],["Furnishing","Semi-furnished"],["Condition","Brand new"]], note: "Posted 4–5 days ago. Listing mentioned both a 1BHK and 2BHK — confirm which." },
     { name: "Owner 7", sub: "Owner", phone: "9686111264", rent: null, facts: [], note: "Only the number was shared — ask for details on the call." },
     { name: "Owner 8", sub: "Owner · Zero brokerage", phone: "8918946881", rent: null, facts: [["Facing","East"],["Type","Premium 2BHK"]], note: "Says \"I am the owner, premium East-facing 2BHK.\"" },
-    { name: "Shubham Gupta", sub: "Owner", phone: "9076082605", rent: "₹50,000", facts: [["Furnishing","Fully furnished"],["Type","2BHK"]], note: "Higher rent — fully furnished flat." }
+    { name: "Shubham Gupta", sub: "Owner", phone: "9076082605", rent: "₹50,000", facts: [["Furnishing","Fully furnished"],["Type","2BHK"]], note: "Higher rent — fully furnished flat." },
+    { name: "Owner 9", sub: "Owner", phone: "9811982309", rent: null, facts: [], note: "Ask for flat size, floor and rent on the call." }
   ];
 
   const indirect = [
@@ -311,6 +375,7 @@
           </div>
         </div>
         <p class="note">${o.note}</p>
+        ${notesHTML('d'+i)}
       </div>`;
     }).join('');
 
